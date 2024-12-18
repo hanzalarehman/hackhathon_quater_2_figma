@@ -9,7 +9,7 @@ function Herosection() {
 
       <section className='md:flex items-center '>
         <div className='md:flex flex-col justify-center ml-96 mb-52'>
-          <h1 className='text-[30px] sm:text-center md:text-[60px] mt-[176px] font-bold  text-black'>Rocket single</h1>
+          <h1 className='text-[30px]  md:text-[60px]  font-bold  text-black'>Rocket single</h1>
           <h1 className='text-[30px]  md:text-[60px] font-bold  text-black'>seater</h1>
           <span className='text-2xl'>Shop Now
 
