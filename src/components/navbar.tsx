@@ -1,9 +1,19 @@
+"use client"
 import Link from 'next/link'
 
 import Image from 'next/image'
 import { Heart, Menu, Search, ShoppingCart } from 'lucide-react'
 import { Button } from './ui/button'
 function Navbar() {
+  function toggleMenu(){
+    const mobileMenuContent = document.getElementById('mobileMenuContent') as HTMLElement;
+
+    if (mobileMenuContent.getAttribute('class') === 'hidden') {
+        mobileMenuContent.setAttribute('class', 'block');
+    } else {
+        mobileMenuContent.setAttribute('class', 'hidden');
+    }
+}
   return (
   <nav className='w-full bg-[#FBEBB5] p-4'>
     <div className='hidden md:block'>
@@ -43,9 +53,45 @@ function Navbar() {
             </Button>
       </div>
       <div>
-        <Menu/>
+        <Menu onClick={toggleMenu}/>
       </div>
     </div>
+    <div className="hidden " id="mobileMenuContent">
+      <div className='min-h-screen'>
+              <div className="flex flex-col text-xl">
+              <Link href="/" className="p-3">Home</Link>
+              <Link href="/shop" className="p-3">Shop</Link>
+              <Link href="/blog" className="p-3">About</Link>
+              <Link href="/contact" className="p-3">Contact</Link>
+            </div>
+              <div className="flex ml-4 gap-x-4 mt-3">
+              <Image
+                  width={15}
+                  height={0}
+                  src="/facebook-brands-solid.svg"
+                  alt={"facebook"}
+                />
+                <Image
+                  width={15}
+                  height={0}
+                  src="/github-brands-solid.svg"
+                  alt={"github"}
+                />
+                <Image
+                  width={15}
+                  height={0}
+                  src="/whatsapp-brands-solid.svg"
+                  alt={"whatsapp"}
+                />
+                <Image
+                  width={15}
+                  height={0}
+                  src="/youtube-brands-solid.svg"
+                  alt={"youtube"}
+                />
+              </div>
+              </div>
+            </div>
     </div>
   </nav>
   )
