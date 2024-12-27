@@ -63,6 +63,7 @@ function Navbar() {
               <Link href="/shop" className="p-3">Shop</Link>
               <Link href="/blog" className="p-3">About</Link>
               <Link href="/contact" className="p-3">Contact</Link>
+              <Link href="/checkout" className="p-3">Checkout</Link>
             </div>
               <div className="flex ml-4 gap-x-4 mt-3">
               <Image
