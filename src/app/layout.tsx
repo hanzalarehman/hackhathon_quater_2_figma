@@ -1,8 +1,11 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,17 +20,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+ 
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className}
+       data-new-gr-c-s-check-loaded="14.1092.0"
+         data-gr-ext-installed=""
+         cz-shortcut-listen="true"
+      >
         <Navbar/>
 <main>
 {children}
-</main>
+</main>   
         
         <Footer/>
     
         </body>
 
     </html>
+
   );
 }
+
